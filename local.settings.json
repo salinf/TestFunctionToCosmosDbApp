@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "connection": "...insert cosmosdb connection string here, from cosmosdb account home --> keys, primary or secondary connection string on that page, should start with AccountEndpoint"
+  }
+  
+}
