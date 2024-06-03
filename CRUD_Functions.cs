@@ -11,12 +11,13 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using TestFunctionToCosmosDbApp.DomainObjects;
 
+
 namespace TestFunctionToCosmosDbApp;
 
 public static class CRUD_Functions
 {
     private const string _DatabaseId = "testDb2"; //Cosmos Db Id (string name) of database in Azure Cosmos db must be set correctly to do anything beyond test action 
-    private const string _ContainerId = "itemsTest"; //Cosmos Container Id (string name) of Container in Azure Cosmos db must be set correctly to do anything beyond test action 
+    private const string _ContainerId = "itemsTest"; //Cosmos Container Id (string name) of Container in Azure Cosmos db must be set correctly to do anything beyond test action    
 
     //Container is like a table name, it is part of a database, it is a container for objects/documents, like a db table that contains rows.
 
