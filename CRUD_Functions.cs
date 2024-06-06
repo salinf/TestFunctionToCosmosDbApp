@@ -111,10 +111,18 @@ public static class CRUD_Functions
         return new NotFoundResult();
     }
 
-    [FunctionName("Test")]
-    public static async Task<IActionResult> Test([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest request, ILogger log)
+    [FunctionName("JustReturnTest")]
+    public static async Task<IActionResult> JrTest([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest request, ILogger log)
     {
-        log.LogInformation("Testing HTTP trigger function processed a request.");
+        log.LogInformation("JustReturnTest HTTP trigger function processed a request. ");
+
+        return new OkObjectResult("Just return");
+    }
+
+    [FunctionName("Test")]
+    public static async Task<IActionResult> Test([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest request, ILogger log)
+    {
+        log.LogInformation("Testing HTTP trigger function processed a request. ");
         log.LogInformation("If you set a name query string parameter or posted a name in JSON it should be echoed back in response.");
 
         string name = request.Query["name"];
